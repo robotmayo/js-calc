@@ -1,0 +1,22 @@
+body {
+  font-family: Helveltica, sans-serif;
+  font-size: 62.5%; }
+
+.container {
+  width: 550px;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 4em; }
+
+#calulator {
+  width: 300px;
+  margin: 0 auto; }
+
+input[type=submit] {
+  width: 40px;
+  float: left;
+  margin: 0 5px; }
+
+.row {
+  clear: both; }
