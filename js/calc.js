@@ -4,6 +4,10 @@ window.onload = function(){
 }
 //Attaches the events to the buttons of the calculator
 function init(){
+  // Clear the input
+  var result = document.getElementById("result-field");
+  result.value = "";
+
   var inputs, index;
   inputs = document.getElementsByTagName('input');
   for(index = 0; index < inputs.length; index++){
@@ -21,6 +25,9 @@ function processButton(event){
   value = target.value;
   if(!isNaN(value)){
     var result = document.getElementById("result-field");
-    alert(result);
+    result.value += value;
+  }else if(value == "C" || "CE"){
+    alert("Placeholder");
+    }
   }
 }
