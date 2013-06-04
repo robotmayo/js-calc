@@ -1,11 +1,15 @@
+(function() {
+
 // Initialize the calcualtor once page is loaded
 window.onload = function(){
-  init();
+init();
 }
+var result;
+var lastValue;
 //Attaches the events to the buttons of the calculator
 function init(){
   // Clear the input
-  var result = document.getElementById("result-field");
+  result = document.getElementById("result-field");
   result.value = "";
 
   var inputs, index;
@@ -21,13 +25,21 @@ function init(){
   }
 }
 function processButton(event){
-  target = event.target || event.srcElement;
-  value = target.value;
+  var target = event.target || event.srcElement;
+  var value = target.value;
   if(!isNaN(value)){
-    var result = document.getElementById("result-field");
     result.value += value;
-  }else if(value == "C" || "CE"){
-    alert("Placeholder");
-    }
+  }else if(value == "C" || value == "CE"){
+    result.value = "";
+  }else{
+    evaluateExpression(value);
   }
 }
+function evaluateExpression(exp){
+  switch(exp){
+    case "+":
+      result = lastValue + int(result); 
+  }
+}
+
+})(); // END SCOPING FUNCTION
