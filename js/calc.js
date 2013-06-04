@@ -38,7 +38,19 @@ function processButton(event){
 function evaluateExpression(exp){
   switch(exp){
     case "+":
-      result = lastValue + int(result); 
+      alert("PLUS");
+      break;
+    case "-":
+      alert("MINUS");
+      break;
+    case "/":
+      alert("DIVIDE");
+      break;
+    case "*":
+      alert("MULTIPLY");
+      break;
+    default:
+      alert("Wtf happened "+ exp);
   }
 }
 
